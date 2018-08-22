@@ -256,7 +256,7 @@ confira a seção __EngineJS.Shape__
 
 ## EngineJS.Image
 ### Descrição:
-A classe usapar para criação e manipulação de imagens
+A classe usada para criação e manipulação de imagens
 ### Cadeia de Herança
 herda de __EngineJS.Element__, __EngineJS.Events__
 ### Métodos Herdados
