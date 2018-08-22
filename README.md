@@ -96,6 +96,7 @@ Se você fez corretamente deverá aparecer um circulo com a cor azul e mais um t
 ### Descrição:
 A classe que contém a maioria dos  eventos  de um objeto por se tratar de uma __Classe abstrata__ à mesma não deve ser instanciada ela serve de base para a criação das outras .
 ### Métodos
+#### setters
 Nome | Modo de uso | Descrição | Argumentos
 -----|-------------|-----------|-----------
 setActionsClick | obj.setActionsClick(function(){console.log("hello world");}) |- Adiciona um evento de click para o objeto |fn: function
@@ -278,5 +279,59 @@ getText | obj.getText() | - Retorna o texto do objeto | string
 Nome | Modo de uso | Descrição | Argumentos
 -----|-------------|-----------|-----------
 setText | obj.setText("textoModificado") | - Modifica o texto do objeto | textValue: string
+setFontFamily | obj.setFontFamily("verdana") | - Modifica a font do objeto | familyValue: string css value
+setFontSize | obj.setFontSize(15) | - Modifica o tamanho da fonte do objeto | sizeValue: number
+setColor | obj.setColor("grey") | - Modifica a cor da fonte do objeto | colorValue: string css value
+setFontWeight | obj.setFontWeight(100) | - Modifica o peso da fonte do objeto | weightValue: number
+setFontStyle | obj.setFontStyle("italic") | - Modifica o estilo da faonte do objeto | styleValue: string css value
+setTextDecoration | obj.setTextDecoration("underline") | - Modifica a decoração do texto do objeto | decorationValue: string css value
+setTextAlign | obj.setTextAlign("center") | - Alinha o texto do objeto | alignValue: string css value
+setLetterSpacing | obj.setLetterSpacing(2) | - Modifica os espaços entre as letras do texto do objeto | spacingValue: number
+setWordSpacing | obj.setWordSpacing(5) | - Modifica os espaços entre as palavras do texto do objeto | wspacingValue: number
+setLineHeight | obj.setLineHeight(2) | - Modifica a altura da linha do texto do objeto | lheight: number
+setTextIndent | obj.setTextIndent(5) | - Modifica a indentação do texto do objeto | indentValue: number
+setTextShadow | obj.setTextShadow("2px 2px #ff0000") | - Modifica a sombra do texto do objeto | shadowValue: string css value
 
+## EngineJS.Group
+### Descrição:
+A classe usada como container para agrupar elementos.
+### Cadeia de Herança
+herda de __EngineJS.Element__, __EngineJS.Events__
+### Métodos Herdados
+confira a seção __EngineJS.Element__
+### Métodos
+#### getters
+Nome | Modo de uso | Descrição | Retorno
+-----|-------------|-----------|--------
+getMembers | obj.getMembers() | - Retorna todos os filhos do grupo | EngineJS.Element
+#### others
+Nome | Modo de uso | Descrição | Argumentos
+-----|-------------|-----------|-----------
+addMembers | obj.addMembers(obj0,obj1,obj2) | - Adiciona filhos para o grupo do objeto |  members: EngineJS.Element ...
+removeMembers | obj.removeMembers(obj1,obj2) | - Remove filhos do grupo do objeto | memebers: EngineJS.Element ....
 
+## EngineJS.Audio
+### Descrição:
+A classe responsável por criar e manipular instâncias de audio.
+### Métodos
+#### getters
+Nome | Modo de uso | Descrição | Retorno
+-----|-------------|-----------|--------
+getAudio | obj.getAudio | - Retorna um HTMLAudioElement do objeto | HTMLAudioElement
+#### setters
+Nome | Modo de uso | Descrição | Argumentos
+-----|-------------|-----------|-----------
+setAudio | obj.setAudio("/PastaAudios/meuAudio.mp3") | - Modifica o arquivo do audio do objeto | audioValue: string
+setPreload | obj.setPreload(true) | - Habilita ou Desabilita o evento de preload do audio
+setAutoPlay | obj.setAutoPlay(false) | - Habilita ou Desabilita o evento de começar automaticamente o audio do objeto | autoPlayValue: boolean
+#### others
+Nome | Modo de uso | Descrição | Argumentos
+-----|-------------|-----------|-----------
+play | obj.play() | - Reproduz o audio do objeto |   |
+pause | obj.pause() | - Para a reprodução do audio do objeto |   |
+
+## EngineJS.Video
+### Descrição:
+A classe responsavel por criar e manipular instâncias de video
+### Cadeia de Herança
+herda de __EngineJS.Element__, __EngineJS.Events__
