@@ -120,7 +120,7 @@ setActionsOnError | obj.setActionsOnError(function(){console.log("hello world");
 setActionsOrientationChange | obj.setActionsOrientationChange(function(){console.log("hello world");) | - Adiciona um evento de orientationchange para o objeto | fn: function
 setActionsScroll | obj.setActionsScroll(function(){console.log("hello world");) | - Adiciona um evento de scroll para o objeto | fn: function
 setPointerEvents | obj.setPointerEvents("none") | - Modifica os eventos de ponteiro do mouse para o objeto | events: string CSS
-setActionsWheel | obj.setActionsWheel | - Adiciona um evento de mousewheel para o objeto | fn: function
+setActionsWheel | obj.setActionsWheel(function(){console.log("hello world");}) | - Adiciona um evento de mousewheel para o objeto | fn: function
 
 
 
@@ -135,11 +135,13 @@ herda de __EngineJS.Events__
 > * _stage
 > * _element
 > * _styleAtual
+### Métodos Herdados
+confira a seção __EngineJS.Events__
 ### Métodos
 #### getters
 Nome | Modo de uso | Descrição | Retorno
 -----|---------|-----------|------------
-getElement | obj.getElement( ) | - Retorna o elemento DOM atual do objeto.| DOMElement
+getElement | obj.getElement( ) | - Retorna o elemento DOM atual do objeto.| HTMLElement
 getID | obj.getID( ) | - Retorna o id atual do elemento. | string |
 getClass | obj.getClass( ) | - Retorna a lista de classes css do elemento.| Array
 getVisible | obj.getVisible( ) | - Retorna a visibilidade do elemento.|boolean
@@ -193,9 +195,88 @@ herda de __EngineJS.Element__ , __EngineJS.Events__
 > * _stage
 > * _element
 > * _styleAtual
+### Métodos Herdados
+confira a seção __EngineJS.Element__
 ### Métodos
 Nome | Modo de uso | Descrição | Argumentos
 -----|-------------|-----------|-----------
-insertHTML | obj.insertHTML("<p>teste</p>") | Insere um conteudo html dentro do elemento | html: HTMLDOMElement ou string html
+insertHTML | obj.insertHTML("<p>teste</p>") | - Insere um conteudo html dentro do elemento | html: HTMLElement ou string html
+setText | obj.setText("aqui vem o texto") | - Altera ou insere um texto dentro do elemento | text: string
+addChild | obj.addChild(new EngineJS.ElementHTML("div")) | - Adiciona um elemento como filho deste elemento | child: EngineJS.ElementHTML ou document.createElement("div")
+getChildrens | obj.getChildrens() | - Retorna os filhos deste elemento
+removeChild | obj.removeChild() | - Remove o elemento filho deste elemento | child: EngineJS.ElementHTML ou string como id do objeto
+addStyles | obj.addStyles("backgroundColor","red") | - Adiciona styles css para o elemento | propriedade: string css value , valor: string css value
+
+## EngineJS.Shape
+### Descrição:
+A classe base para a criação e manipulação das formas __Rectangle e Ellipse__ por ser uma __Classe abstrata__ não deve ser instanciada.
+### Cadeia de Herança
+herda de __EngineJS.Element__, __EngineJS.Events__
+### Métodos Herdados
+confira a seção __EngineJS.Element__
+### Métodos
+#### setters
+Nome | Modo de uso | Descrição | Argumnetos
+-----|-------------|-----------|-----------
+setBackgroundColor | obj.setBackgroundColor("blue") | - Modifica a cor do background do objeto | bg: string css value
+setGradientLinear | obj.setGradientLinear("(red, yellow)") | - Modifica a cor gradient do objeto do tipo linear | gradient: string css value
+setGradientRadial | obj.setGradientRadial("(red, yellow, green)") | - Modifica a cor gradient do objeto do tipo radial | gradient: string css value
+setBorderColor | obj.setBorderColor("orange") | - Modifica a cor da borda do objeto | color: string css value
+setBorderStyle | obj.setBorderStyle("dotted") | - Modifica o estilo da borda do objeto | estilo: string css value
+setBorderWidth | obj.setBorderWidth(5) | - Modifica a expessura da borda do objeto | expessura: string css value
+
+## EngineJS.Rectangle
+### Descrição:
+A classe usada para criação e manipulação de formas em retângulos.
+### Cadeia de Herança
+herda de __EngineJS.Shape__, __EngineJS.Element__, __EngineJS.Events__
+### Métodos Herdados
+confira a seção __EnigineJS.Shape__
+### Métodos
+#### setters
+Nome | Modo de uso | Descrição | Argumentos
+-----|-------------|-----------|-----------
+setCorners | obj.setCorners(20) | - Arredonda as bordas do objeto | corners: number
+
+## EngineJS.Ellipse
+### Descrição:
+A classe usada para criação e manipulação de formas em ellipse
+### Cadeia de Herança
+herda de  __EngineJS.Shape__, __EngineJS.Element__, __EngineJS.Events__
+### Métodos Herdados
+confira a seção __EngineJS.Shape__
+
+## EngineJS.Image
+### Descrição:
+A classe usapar para criação e manipulação de imagens
+### Cadeia de Herança
+herda de __EngineJS.Element__, __EngineJS.Events__
+### Métodos Herdados
+confira a seção __EngineJS.Element__
+### Métodos
+#### setters
+Nome | Modo de uso | Descrição | Argumentos
+-----|-------------|-----------|----------
+setImage | obj.setImage("/PastaImagens/imagem.png") | - Modifica o arquivo de imagem do objeto | src: string
+setBackgroundPosition | obj.setBackgroundPosition("right bottom, left top") | - Modifica a posicao do background do objeto | position: string css value
+setBackgroundSize | obj.setBackgroundSize("cover") | - Modifica o tamanho do background | size: string css value
+setCorners | obj.setCorners(25) | - Arredonda os cantos da imagem | cornersValue: number
+
+## EngineJS.Text
+### Descrição:
+A classe usada para criação e manipulação de textos.
+### Cadeia de Herança
+herda de __EngineJS.Element__, __EngineJS.Events__
+### Métodos Herdados
+confira a seção __EngineJS.Element__
+### Métodos
+#### getters
+Nome | Modo de uso | Descrição | Retorno
+-----|-------------|-----------|-----------
+getText | obj.getText() | - Retorna o texto do objeto | string
+#### setters
+Nome | Modo de uso | Descrição | Argumentos
+-----|-------------|-----------|-----------
+setText | obj.setText("textoModificado") | - Modifica o texto do objeto | textValue: string
 
 
