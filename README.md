@@ -92,10 +92,42 @@ texto.setText("meu novo texto aqui!");
 Se você fez corretamente deverá aparecer um circulo com a cor azul e mais um texto com a palavra "meu novo texto aqui!" no seu browser assim que a página for carregada :)<br>
       Isso foi apenas um exemplo simples e prático de uso da EngineJS e do que ela é capaz de fazer com poucas linhas de código. 
 # Classes
+## EngineJS.Events
+### Descrição:
+A classe que contém a maioria dos  eventos  de um objeto por se tratar de uma __Classe abstrata__ à mesma não deve ser instanciada ela serve de base para a criação das outras .
+### Métodos
+Nome | Modo de uso | Descrição | Argumentos
+-----|-------------|-----------|-----------
+setActionsClick | obj.setActionsClick(function(){console.log("hello world");}) |- Adiciona um evento de click para o objeto |fn: function
+setActionsDblClick | obj.setActionsDblClick(function(){console.log("hello world");}) | - Adiciona um evento de doubleClick para o objeto | fn: function
+setActionsMouseOver | obj.setActionsMouseOver(function(){console.log("hello world");}) | - Adiciona um evento de mouseover para o objeto | fn : function
+setActionsMouseOut | obj.setActionsMouseOut(function(){console.log("hello world");}) | - Adiciona um evento de mouseout para o objeto | fn : function
+setActionsMouseEnter | obj.setActionsMouseEnter(function(){console.log("hello world");}) | - Adiciona um evento de mousenter para o objeto | fn: function
+setActionsMouseLeave | obj.setActionsMouseLeave(function(){console.log("hello world");}) | - Adiciona um evento de mouseleave para o objeto | fn: function
+setActionsMouseDown | obj.setActionsMouseDown(function(){console.log("hello world");}) | -  Adiciona um evento de mousedown para o objeto | fn: function
+setActionsMouseUp  | obj.setActionsMouseUp(function(){console.log("hello world");})  | - Adiciona um evento de mouseup para o objeto | fn : function
+setActionsMouseMove | obj.setActionsMouseMove(function(){console.log("hello world");}) | - Adiciona um evento de mousemove para o objeto | fn:function
+setActionsTouchStart | obj.setActionsTouchStart(function(){console.log("hello world");}) | - Adiciona um evento de touchstart para o objeto | fn: function
+setActionsTouchEnd | obj.setActionsTouchEnd(function(){console.log("hello world");}) | - Adiciona um evento de touchend para o objeto | fn: function
+setActionsTouchMove | obj.setActionsTouchMove(function(){console.log("hello world");}) | - Adiciona um evento de touchmove para o objeto | fn: function
+setActionsFocus | obj.setActionsFocus(function(){console.log("hello world");}) | - Adiciona um evento de focus para o objeto | fn: function
+setActionsSwipeLeft | obj.setActionsSwipeLeft(function(){console.log("hello world");) | - Adiciona um evento de swipeleft para o objeto | fn: function
+setActionsSwipeRight | obj.setActionsSwipeRight(function(){console.log("hello world");) | - Adiciona um evento de swiperight para o objeto
+setActionsKeyDown | obj.setActionsKeyDown(function(){console.log("hello world");) | - Adiciona um evento de keydown para o objeto | fn: function
+setActionsKeyup | obj.setActionsKeyup(function(){console.log("hello world");) | - Adiciona um evento de keyup para o objeto | fn: function
+setActionsResize | obj.setActionsResize(function(){console.log("hello world");) | - Adiciona um evento de resize para o objeto | fn: function
+setActionsOnError | obj.setActionsOnError(function(){console.log("hello world");) | - Adiciona um evento de error para o objeto | fn: function
+setActionsOrientationChange | obj.setActionsOrientationChange(function(){console.log("hello world");) | - Adiciona um evento de orientationchange para o objeto | fn: function
+setActionsScroll | obj.setActionsScroll(function(){console.log("hello world");) | - Adiciona um evento de scroll para o objeto | fn: function
+setPointerEvents | obj.setPointerEvents("none") | - Modifica os eventos de ponteiro do mouse para o objeto | events: string CSS
+setActionsWheel | obj.setActionsWheel | - Adiciona um evento de mousewheel para o objeto | fn: function
+
+
+
 
 ## EngineJS.Element
 ### Descrição:
-A classe principal da biblioteca que contém todas as principais propriedades e métodos para a manipulação do objeto por ser uma classe abstrata não deve ser instanciada .
+A classe principal da biblioteca que contém todas as principais propriedades e métodos para a manipulação do objeto por ser uma __classe abstrata não deve ser instanciada__ .
 ### Cadeia de Herança
 herda de __EngineJS.Events__
 ### Propriedades
@@ -107,32 +139,63 @@ herda de __EngineJS.Events__
 #### getters
 Nome | Modo de uso | Descrição | Retorno
 -----|---------|-----------|------------
-getElement | obj.getElement( ); | - retorna o elemento DOM atual do objeto.| DOMElement
-getID | obj.getID( ); | - o id atual do elemento. | string |
-getClass | obj.getClass( ); | - a lista de classes css do elemento.| Array
-getVisible | obj.getVisible( ); | - retorna a visibilidade do elemento.|boolean
-getOverFlow | obj.getOverFlow( ); | - retorno o tipo de transbordamento do elemento.| string
-getOpacity | obj.getOpacity( ); | - retorna o nivel de opacidade do elemento.| number
-getLayer | obj.getLayer( ); | - retorna a camada z-index do elemento.| number
-getLeft | obj.getLeft( ); | - retorna o posicionamento no eixo x.| number
-getTop | obj.getTop( ); | - retorna o posicionamento no eixo y.| number
-getWidth | obj.getWidth( ); | - retorno a largura atual do elemento.| number
-getHeight | obj.getHeight( ); | - retorna a altura total do elemento.| number
+getElement | obj.getElement( ) | - Retorna o elemento DOM atual do objeto.| DOMElement
+getID | obj.getID( ) | - Retorna o id atual do elemento. | string |
+getClass | obj.getClass( ) | - Retorna a lista de classes css do elemento.| Array
+getVisible | obj.getVisible( ) | - Retorna a visibilidade do elemento.|boolean
+getOverFlow | obj.getOverFlow( ) | - Retorno o tipo de transbordamento do elemento.| string CSS
+getOpacity | obj.getOpacity( ) | - Retorna o nivel de opacidade do elemento.| number
+getLayer | obj.getLayer( ) | - Retorna a camada z-index do elemento.| number
+getLeft | obj.getLeft( ) | - Retorna o posicionamento no eixo x.| number
+getTop | obj.getTop( ) | - Retorna o posicionamento no eixo y.| number
+getWidth | obj.getWidth( ) | - Retorno a largura atual do elemento.| number
+getHeight | obj.getHeight( ) | - Retorna a altura total do elemento.| number
+getCursor  | obj.getCursor( ) | - Retorna o tipo cursor do objeto atual | string CSS
 
 #### setters
 Nome | Modo de uso | Descrição | Argumentos
 -----|-------------|-----------|------------
 setID | obj.setID("meuID"); | - Modifica o id do objeto.| id: string
 setVisible | obj.setVisible(true); | - Modifica a visibilidade do objeto.| visivel: boolean
-setOverFlow | obj.setOverFlow("hidden"); | - Modifica o transbordamento do objeto.| overflow: string
+setOverFlow | obj.setOverFlow("hidden"); | - Modifica o transbordamento do objeto.| overflow: string CSS
 setOpacity | obj.setOpacity(0.5); | - Modifica a opacidade do objeto.| opacidade: number
-setLayer | void | - Modifica a camada de sobreposicao do objeto.|
-setLeft | void | - Modifica o posicionamento no eixo x do objeto.|
-setTop | void | - Modifica o posicionamento no eixo y do objeto.|
-setPosition | void | - Modifica ambos posicionamento nos eixos x e y do objeto.|
-setWidth | void | - Modifica a largura do objeto.|
-setHeight | void | - Modifica a altura do objeto.|
+setLayer | obj.setLayer(1) | - Modifica a camada de sobreposicao do objeto.| layer: number
+setLeft | obj.setLeft(150) | - Modifica o posicionamento no eixo x do objeto.| x: number
+setTop | obj.setTop(150) | - Modifica o posicionamento no eixo y do objeto.| y : number
+setPosition | obj.setPosition(100, 400) | - Modifica ambos posicionamento nos eixos x e y do objeto.| x: number, y: number
+setWidth | obj.setWidth(320) | - Modifica a largura do objeto.| width: number
+setHeight | obj.setHeight(78) | - Modifica a altura do objeto.| height: number
+setSize   | obj.setSize(200, 45)     | - Modifica ambos largura e altura do objeto | largura: number , altura: number
+setMinWidth | obj.setMinWidth(50)    | - Modifica a larguraMinima do objeto   |  larguraMinima: number
+setMaxWidth  | obj.setMaxWidth(300)   |  - Modifica a largura maxima do objeto   | larguraMaxima: number
+setTransform  | obj.setTransform("rotate(90deg)")  | - Modifica a transformacao do objeto atual  | transformacao: string CSS
+setTransformOrigin  |  obj.setTransformOrigin("50% 20%")  |  - Modifica o ponto de origem do objeto  |  origin: string CSS
+setCursor   |  obj.setCursor("pointer")  |  - Modifica o cursor do objeto  | cursor: string CSS
+setShadow  |  obj.setShadow("5px 10px #888888")   |  Modifica o nivel de sombra do objeto  |  shadow: string CSS
+setClip   |  obj.setClip("rect(0px,60px,200px,0px)")  |  - Modifica a área de clip do objeto  | clipValue: string CSS
+setTitle  |  obj.setTitle("title-exemplo")  |  - Modifica o atributo title do elemento  | title: string
+setTabIndex  |  obj.setTabIndex(1)  | - Modifica o tabIndex do elemento  | index: integer
+setFilters   |  obj.setFilters("grayscale(100%)")  |  - Modifica os filtros do objeto  | filters: string CSS
 
 #### others
-Nome | Retorno | Descrição
+Nome | Modo de uso | Descrição | Argumentos
 -----|---------|----------
+addClass | obj.addClass("minha-classe") | Adiciona uma classe de css para o elemento | cs: string
+removeClass | obj.removeClass("minha-classe") | Remove uma classe de css do elemento | cs: string
+
+## EngineJS.ElementHTML
+### Descrição:
+Classe usada para criar DOM Elements puros sem formatação.
+### Cadeia de Herança
+herda de __EngineJS.Element__ , __EngineJS.Events__
+### Propriedades
+##### membros privados herdados 
+> * _stage
+> * _element
+> * _styleAtual
+### Métodos
+Nome | Modo de uso | Descrição | Argumentos
+-----|-------------|-----------|-----------
+insertHTML | obj.insertHTML("<p>teste</p>") | Insere um conteudo html dentro do elemento | html: HTMLDOMElement ou string html
+
+
