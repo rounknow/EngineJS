@@ -366,5 +366,43 @@ Nome | Modo de uso | Descrição | Argumentos
 play | obj.play() | - Reproduz o video |  |
 pause | obj.pause() | - Para a reprodução do video |   |
 
+## EngineJS.Stage
+### Descrição:
+A classe responsavel por renderizar os objetos criados.
+### Cadeia de Herança
+herda de __EngineJS.Events__
+### Propriedades
+> *  _bodyElement
+> * _metaResponsive
+> * _headElement
+> * _element
+> * _autoPlay
+> * _centerStage
+> * _responsiveScale
 
+### Métodos Herdados
+confira a seção __EngineJS.Events__
+#### getters
+Nome | Modo de uso | Descrição | Retorno
+-----|-------------|-----------|-----------
+getElement | obj.getElement() | - Retorna a instância de palco | HTMLDivElement  
+#### setters
+Nome | Modo de uso | Descrição | Argumentos
+-----|-------------|-----------|-----------
+setTitle | obj.setTitle("meu titulo") | - Adiciona ou modifica o title da página | title: string
+setWidth | obj.setWidth(450) | - Modifica a largura do palco em pixels | width: number
+setHeight | obj.setHeight(512) | - Modifica a altura do palco em pixels | height: number
+setSize | obj.setSize(450, 512) | - Modifica os valores de largura e altura do palco em pixels | width: number, height: number
+setBackgroundColor | obj.setBackgroundColor("yellow") | - Modifica o valor de cor de fundo do palco | background: string css value
+setBackgroundGradient | obj.setBakcgroundGradient("") | - Modifica a cor de gradiente do fundo do palco | gradient: string css value
+setMinWidth | obj.setMinWidth(320) | - Determina a largura mínima do palco em pixels | minWidth: number
+setMaxWidth | obj.setMaxWidth(1080) | - Determina a largura máxima do palco em pixels | maxWidth: number
+setOverFlow | obj.setOverFlow("hidden","scroll") | - Modifica o transbordamento x e y do palco | overflowX: string css value, overflowY: string css value 
+setCenterStage | obj.setCenterStage(true) | - Modifica a centralização do palco relativa ao window | center: boolean
+setCustomCursor | obj.setCustomCursor("/MinhasImagens/figura.cur") | - Adiciona e Customiza o cursor do mouse | cursor: string
+setResponsiveScale | obj.setResponsiveScale(true) | - Habilita o palco a ser responsivel de acordo com o window | responsive: boolean
+#### others
+Nome | Modo de uso | Descrição | Argumentos
+-----|-------------|-----------|-----------
+preloader | obj.preloader({imagens:["/MinhasImagens/imagem.png"],videos:["/MeusVideos/video.mp4"],audios:["/MeusAudios/audio.mp3"]}) | - Cria uma barra de carregamento dos arquivos a serem usados no palco | imagens: string[], videos: string[], audios:[]
 
