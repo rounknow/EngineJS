@@ -113,7 +113,7 @@ setActionsTouchEnd | obj.setActionsTouchEnd(function(){console.log("hello world"
 setActionsTouchMove | obj.setActionsTouchMove(function(){console.log("hello world");}) | - Adiciona um evento de touchmove para o objeto | fn: function
 setActionsFocus | obj.setActionsFocus(function(){console.log("hello world");}) | - Adiciona um evento de focus para o objeto | fn: function
 setActionsSwipeLeft | obj.setActionsSwipeLeft(function(){console.log("hello world");) | - Adiciona um evento de swipeleft para o objeto | fn: function
-setActionsSwipeRight | obj.setActionsSwipeRight(function(){console.log("hello world");) | - Adiciona um evento de swiperight para o objeto
+setActionsSwipeRight | obj.setActionsSwipeRight(function(){console.log("hello world");) | - Adiciona um evento de swiperight para o objeto | fn: function
 setActionsKeyDown | obj.setActionsKeyDown(function(){console.log("hello world");) | - Adiciona um evento de keydown para o objeto | fn: function
 setActionsKeyup | obj.setActionsKeyup(function(){console.log("hello world");) | - Adiciona um evento de keyup para o objeto | fn: function
 setActionsResize | obj.setActionsResize(function(){console.log("hello world");) | - Adiciona um evento de resize para o objeto | fn: function
@@ -199,12 +199,19 @@ herda de __EngineJS.Element__ , __EngineJS.Events__
 ### Métodos Herdados
 confira a seção __EngineJS.Element__
 ### Métodos
+#### getters
+Nome | Modo de uso | Descrição | Retorno
+-----|-------------|-----------|-----------
+getChildrens | obj.getChildrens() | - Retorna os filhos deste elemento | EngineJS.Element[]
+#### setters
+Nome | Modo de uso | Descrição | Argumentos
+-----|-------------|-----------|-----------
+setText | obj.setText("aqui vem o texto") | - Altera ou insere um texto dentro do elemento | text: string
+#### others
 Nome | Modo de uso | Descrição | Argumentos
 -----|-------------|-----------|-----------
 insertHTML | obj.insertHTML("<p>teste</p>") | - Insere um conteudo html dentro do elemento | html: HTMLElement ou string html
-setText | obj.setText("aqui vem o texto") | - Altera ou insere um texto dentro do elemento | text: string
 addChild | obj.addChild(new EngineJS.ElementHTML("div")) | - Adiciona um elemento como filho deste elemento | child: EngineJS.ElementHTML ou document.createElement("div")
-getChildrens | obj.getChildrens() | - Retorna os filhos deste elemento
 removeChild | obj.removeChild() | - Remove o elemento filho deste elemento | child: EngineJS.ElementHTML ou string como id do objeto
 addStyles | obj.addStyles("backgroundColor","red") | - Adiciona styles css para o elemento | propriedade: string css value , valor: string css value
 
@@ -317,7 +324,7 @@ A classe responsável por criar e manipular instâncias de audio.
 #### getters
 Nome | Modo de uso | Descrição | Retorno
 -----|-------------|-----------|--------
-getAudio | obj.getAudio | - Retorna um HTMLAudioElement do objeto | HTMLAudioElement
+getAudio | obj.getAudio() | - Retorna um HTMLAudioElement do objeto | HTMLAudioElement
 #### setters
 Nome | Modo de uso | Descrição | Argumentos
 -----|-------------|-----------|-----------
@@ -335,3 +342,29 @@ pause | obj.pause() | - Para a reprodução do audio do objeto |   |
 A classe responsavel por criar e manipular instâncias de video
 ### Cadeia de Herança
 herda de __EngineJS.Element__, __EngineJS.Events__
+### Métodos Herdados
+confira seção __EngineJS.Element__
+### Métodos
+#### getters
+Nome | Modo de uso | Descrição | Retorno
+-----|-------------|-----------|-----------
+getVideo | obj.getVideo() | - Retorna a intância de um  HTMLVideoElement | HTMLVideoElement
+getLoop | obj.getLoop() | - Retorna se o se o video esta em loop | booelan
+getVolume | obj.getVolume() | - Retorna o nível de volume do video | number
+#### setters
+Nome | Modo de uso | Descrição | Argumentos
+-----|-------------|-----------|-----------
+setVideo | obj.setVideo("/MeusVideos/video.mp3","video/mp3") | - Modifica o arquivo de video do objeto | videoValue: string , typeValue: string MIME/TYPE
+setLoop | obj.setLoop(true) | - Habilita ou Desabilita a reprodução em loop do video | lopValue: boolean
+setControls | obj.setControls(false) | - Habilita ou Desabilita os controles do video | controlsValue: boolean
+setVolume | obj.setVolume(0.7) | - Modifica o nível de volume do video | volumeValue: number
+setPosterImage | obj.setPosterImage("MinhasImagens/poster.png") | - Adiciona ou Modifica a imgem poster do video | posterValue: string
+setAutoPlay | obj.setAutoPlay(true) | - Habilita a auto reprodução do video antes do começo | autoPlayValue: boolean 
+#### others
+Nome | Modo de uso | Descrição | Argumentos
+-----|-------------|-----------|-----------
+play | obj.play() | - Reproduz o video |  |
+pause | obj.pause() | - Para a reprodução do video |   |
+
+
+
