@@ -179,7 +179,7 @@ setFilters   |  obj.setFilters("grayscale(100%)")  |  - Modifica os filtros do o
 
 #### others
 Nome | Modo de uso | Descrição | Argumentos
------|---------|----------
+-----|---------|---------------|-----------
 addClass | obj.addClass("minha-classe") | Adiciona uma classe de css para o elemento | cs: string
 removeClass | obj.removeClass("minha-classe") | Remove uma classe de css do elemento | cs: string
 
