@@ -196,6 +196,15 @@ herda de __EngineJS.Element__ , __EngineJS.Events__
 > * _stage
 > * _element
 > * _styleAtual
+
+## Constructor - EngineJS.ElementHTML({ id: "meuElemento", tipo: "div" })
+Argumentos| tipo | Descrição | Valor Padrão
+----------|------|-----------|-------------
+id | string | identificador do elemento | "ElementHTML"
+tipo | string | o tipo de HTMLElement a ser criado | 
+
+
+
 ### Métodos Herdados
 confira a seção __EngineJS.Element__
 ### Métodos
