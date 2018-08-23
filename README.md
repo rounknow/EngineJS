@@ -32,7 +32,7 @@ var stage;
 ````
 2.  logo depois faça a variável ser uma instância da **Classe Stage** e aproveite e passe os parâmetros de __largura e altura__
 ````javascript
-stage = new EngineJS.Stage(880,550);
+stage = new EngineJS.Stage({w:880, h:550});
 
 ````
 ### 4. Criando um circulo
@@ -44,10 +44,10 @@ Agora vamos adicionar ao palco que foi criado um objeto do tipo Ellipse e mudar 
 var circulo;
 
 ````
-2. Depois faça a variável ser uma instância da classe Ellipse e preencha os parametros de **ID , X , Y , Raio**
+2. Depois faça a variável ser uma instância da classe Ellipse e preencha os parametros de **ID , X , Y , R**
 
 ````javascript
-circulo = new EngineJS.Ellipse("meuCirculo",50,50,100);
+circulo = new EngineJS.Ellipse({id:"meuCirculo", x:50, y:50, r:100});
 
 ````
 ### 5. Manipulando as propriedades do circulo
@@ -55,11 +55,11 @@ circulo = new EngineJS.Ellipse("meuCirculo",50,50,100);
 Com o objeto circulo criado vamos mudar sua cor de fundo tornado-o azul e também sua posição relativa ao palco em pixels.
 1. Alterando a cor de fundo do circulo
 ````javascript
-circulo.setBackgroundColor("blue");
+circulo.setBackgroundColor({color:"blue"});
 ````
 2. Posicionando o circulo em relação ao palco
 ````javascript
-circulo.setPosition(200,200);
+circulo.setPosition({x:200, y:200});
 
 ````
 ### 6. Criando um texto
@@ -71,10 +71,10 @@ Vamos adicionar um texto no nosso palco utilizando a __Classe Text__
 var texto;
 
 ````
-2. Depois faça a variável ser do tipo __Text__ e passe os seguintes parâmetros de __ID , x , y__ e o __texto__ a ser mostrado.
+2. Depois faça a variável ser do tipo __Text__ e passe os seguintes parâmetros de __ID , x , y__ e o __text__ a ser mostrado.
 
 ````javascript
-texto = new EngineJS.Text("meuTexto",30,77,"meuTextoVemAqui");
+texto = new EngineJS.Text({id:"meuTexto", x:30, y:77, text:"meuTextoVemAqui"});
 
 ````
 ### 7. Manipulando o texto criado
@@ -84,7 +84,7 @@ Com o objeto texto criado vamos mudar o texto a ser renderizado no  browser.
 1. modifique o valor do texto.
 
 ````javascript
-texto.setText("meu novo texto aqui!");
+texto.setText({text:"meu novo texto aqui!"});
 
 ````
 
@@ -307,7 +307,7 @@ A classe usada para criação e manipulação de textos.
 ### Cadeia de Herança
 herda de __EngineJS.Element__, __EngineJS.Events__
 
-## Contructor - EngineJS.Text({ id: "meuTexto", x: 200, y: 200, "Hello Wrold"})
+## Contructor - EngineJS.Text({ id: "meuTexto", x: 200, y: 200, "Hello World"})
 Argumentos| tipo | Descrição | Valor Padrão
 ----------|------|-----------|-------------
 id | string | o identificador do o elemento | ""
