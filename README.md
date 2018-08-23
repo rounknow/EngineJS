@@ -202,7 +202,7 @@ confira a seção __EngineJS.Element__
 #### getters
 Nome | Modo de uso | Descrição | Retorno
 -----|-------------|-----------|-----------
-getChildrens | obj.getChildrens() | - Retorna os filhos deste elemento | EngineJS.Element[]
+getChildren | obj.getChildren() | - Retorna os filhos deste elemento | EngineJS.Element[]
 #### setters
 Nome | Modo de uso | Descrição | Argumentos
 -----|-------------|-----------|-----------
@@ -213,7 +213,7 @@ Nome | Modo de uso | Descrição | Argumentos
 insertHTML | obj.insertHTML("<p>teste</p>") | - Insere um conteudo html dentro do elemento | html: HTMLElement ou string html
 addChild | obj.addChild(new EngineJS.ElementHTML("div")) | - Adiciona um elemento como filho deste elemento | child: EngineJS.ElementHTML ou document.createElement("div")
 removeChild | obj.removeChild() | - Remove o elemento filho deste elemento | child: EngineJS.ElementHTML ou string como id do objeto
-addStyles | obj.addStyles("backgroundColor","red") | - Adiciona styles css para o elemento | propriedade: string css value , valor: string css value
+addStyle | obj.addStyle("backgroundColor","red") | - Adiciona styles css para o elemento | propriedade: string css value , valor: string css value
 
 ## EngineJS.Shape
 ### Descrição:
@@ -238,6 +238,16 @@ setBorderWidth | obj.setBorderWidth(5) | - Modifica a expessura da borda do obje
 A classe usada para criação e manipulação de formas em retângulos.
 ### Cadeia de Herança
 herda de __EngineJS.Shape__, __EngineJS.Element__, __EngineJS.Events__
+
+## Contructor - EngineJS.Rectangle({ id: "meuEllipse", x: 200, y: 200, w: 30, h: 700})
+Argumentos| tipo | Descrição | Valor Padrão
+----------|------|-----------|-------------
+id | string | o identificador do o elemento | ""
+x | number | a posição do eixo x referente ao palco em pixels| 0
+y | number | a posição do eixo y referente ao palco em pixels | 0
+w | number | a largura do objeto em pixels | 0
+h | number | a altura do objeto em pixels | 0
+
 ### Métodos Herdados
 confira a seção __EnigineJS.Shape__
 ### Métodos
@@ -251,6 +261,15 @@ setCorners | obj.setCorners(20) | - Arredonda as bordas do objeto | corners: num
 A classe usada para criação e manipulação de formas em ellipse
 ### Cadeia de Herança
 herda de  __EngineJS.Shape__, __EngineJS.Element__, __EngineJS.Events__
+
+## Contructor - EngineJS.Ellipse({ id: "meuEllipse", x: 200, y: 200, r: 50})
+Argumentos| tipo | Descrição | Valor Padrão
+----------|------|-----------|-------------
+id | string | o identificador do o elemento | ""
+x | number | a posição do eixo x referente ao palco | 0
+y | number | a posição do eixo y referente ao palco | 0
+r | number | a dimensão do raio do objeto | 0
+
 ### Métodos Herdados
 confira a seção __EngineJS.Shape__
 
@@ -259,6 +278,18 @@ confira a seção __EngineJS.Shape__
 A classe usada para criação e manipulação de imagens
 ### Cadeia de Herança
 herda de __EngineJS.Element__, __EngineJS.Events__
+
+## Contructor - EngineJS.Image({ id: "minhaImagem", x: 200, y: 200, ,w: 100, h: 100, source: "/MinhasImagens/figura.png"})
+Argumentos| tipo | Descrição | Valor Padrão
+----------|------|-----------|-------------
+id | string | o identificador do o elemento | ""
+x | number | a posição do eixo x referente ao palco | 0
+y | number | a posição do eixo y referente ao palco | 0
+w | number | a largura da imgem do objeto | 0
+h | number | a altura da imagem do objeto | 0
+source | string | o caminho aonde se encontra o arquivo
+
+
 ### Métodos Herdados
 confira a seção __EngineJS.Element__
 ### Métodos
@@ -275,6 +306,15 @@ setCorners | obj.setCorners(25) | - Arredonda os cantos da imagem | cornersValue
 A classe usada para criação e manipulação de textos.
 ### Cadeia de Herança
 herda de __EngineJS.Element__, __EngineJS.Events__
+
+## Contructor - EngineJS.Text({ id: "meuTexto", x: 200, y: 200, "Hello Wrold"})
+Argumentos| tipo | Descrição | Valor Padrão
+----------|------|-----------|-------------
+id | string | o identificador do o elemento | ""
+x | number | a posição do eixo x referente ao palco | 0
+y | number | a posição do eixo y referente ao palco | 0
+text | string | o texto a ser renderizado | ""
+
 ### Métodos Herdados
 confira a seção __EngineJS.Element__
 ### Métodos
@@ -304,6 +344,16 @@ setTextShadow | obj.setTextShadow("2px 2px #ff0000") | - Modifica a sombra do te
 A classe usada como container para agrupar elementos.
 ### Cadeia de Herança
 herda de __EngineJS.Element__, __EngineJS.Events__
+
+## Constructor - EngineJS.Group({ id: "meuGrupo", x: 50, y: 174, w: 500, h: 500})
+Argumentos| tipo | Descrição | Valor Padrão
+----------|------|-----------|-------------
+id | string | o identificador do o elemento | ""
+x | number | a posição do eixo x referente ao palco | 0
+y | number | a posição do eixo y referente ao palco | 0
+w | number | a largura do objeto | 0
+h | number | a altura do objeto | 0
+
 ### Métodos Herdados
 confira a seção __EngineJS.Element__
 ### Métodos
@@ -320,6 +370,13 @@ removeMembers | obj.removeMembers(obj1,obj2) | - Remove filhos do grupo do objet
 ## EngineJS.Audio
 ### Descrição:
 A classe responsável por criar e manipular instâncias de audio.
+
+## Constructor - EngineJS.Audio({ source: "/MeusAudios/audio.mp3", auto: true })
+Argumentos| tipo | Descrição | Valor Padrão
+----------|------|-----------|-------------
+source | string | camnho aonde se encontra o arquivo | ""
+auto | boolean | habilita a auto reprodução do audio  | false
+
 ### Métodos
 #### getters
 Nome | Modo de uso | Descrição | Retorno
@@ -342,6 +399,18 @@ pause | obj.pause() | - Para a reprodução do audio do objeto |   |
 A classe responsavel por criar e manipular instâncias de video
 ### Cadeia de Herança
 herda de __EngineJS.Element__, __EngineJS.Events__
+
+## Constructor -  EngineJS.Video( { id: "meuVideo", x: 400, y: 0, w: 200, h: 200, video: "/MeusVideos/video.mp4", type: "video/mp4" })
+Argumentos| tipo | Descrição | Valor Padrão
+----------|------|-----------|-------------
+id | string | identificador do elemento | ""
+x | number | posicição do eixo x referente ao palco | 0
+y | number | posição do eixo y referente ao palco | 0
+w | number | lergura do palco | 880
+h | number | altura do palco | 550
+video | string | caminho aonde se encontra o arquivo | ""
+type | string | o tipo do arquivo como MIMETYPE | 
+
 ### Métodos Herdados
 confira seção __EngineJS.Element__
 ### Métodos
@@ -383,6 +452,13 @@ herda de __EngineJS.Events__
 
 ### Métodos Herdados
 confira a seção __EngineJS.Events__
+
+## Constructor - EngineJS.Stage( { w: 300, h: 400 })
+Argumentos| tipo | Descrição | Valor Padrão
+----------|------|-----------|-------------
+w | number | lergura do palco | 880
+h | number | altura do palco | 550
+
 #### getters
 Nome | Modo de uso | Descrição | Retorno
 -----|-------------|-----------|-----------
