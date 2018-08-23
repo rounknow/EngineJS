@@ -144,23 +144,23 @@ Nome | Modo de uso | Descrição | Retorno
 -----|---------|-----------|------------
 getElement | obj.getElement( ) | - Retorna o elemento DOM atual do objeto.| HTMLElement
 getID | obj.getID( ) | - Retorna o id atual do elemento. | string |
-getClass | obj.getClass( ) | - Retorna a lista de classes css do elemento.| Array
+getClass | obj.getClass( ) | - Retorna a lista de classes css do elemento.| Array string
 getVisible | obj.getVisible( ) | - Retorna a visibilidade do elemento.|boolean
-getOverFlow | obj.getOverFlow( ) | - Retorno o tipo de transbordamento do elemento.| string CSS
+getOverFlow | obj.getOverFlow( ) | - Retorno o tipo de transbordamento do elemento.| string css value
 getOpacity | obj.getOpacity( ) | - Retorna o nivel de opacidade do elemento.| number
 getLayer | obj.getLayer( ) | - Retorna a camada z-index do elemento.| number
 getLeft | obj.getLeft( ) | - Retorna o posicionamento no eixo x.| number
 getTop | obj.getTop( ) | - Retorna o posicionamento no eixo y.| number
 getWidth | obj.getWidth( ) | - Retorno a largura atual do elemento.| number
 getHeight | obj.getHeight( ) | - Retorna a altura total do elemento.| number
-getCursor  | obj.getCursor( ) | - Retorna o tipo cursor do objeto atual | string CSS
+getCursor  | obj.getCursor( ) | - Retorna o tipo cursor do objeto atual | string css value
 
 #### setters
 Nome | Modo de uso | Descrição | Argumentos
 -----|-------------|-----------|------------
 setID | obj.setID("meuID"); | - Modifica o id do objeto.| id: string
 setVisible | obj.setVisible(true); | - Modifica a visibilidade do objeto.| visivel: boolean
-setOverFlow | obj.setOverFlow("hidden"); | - Modifica o transbordamento do objeto.| overflow: string CSS
+setOverFlow | obj.setOverFlow("hidden"); | - Modifica o transbordamento do objeto.| overflow: string css value
 setOpacity | obj.setOpacity(0.5); | - Modifica a opacidade do objeto.| opacidade: number
 setLayer | obj.setLayer(1) | - Modifica a camada de sobreposicao do objeto.| layer: number
 setLeft | obj.setLeft(150) | - Modifica o posicionamento no eixo x do objeto.| x: number
@@ -171,14 +171,14 @@ setHeight | obj.setHeight(78) | - Modifica a altura do objeto.| height: number
 setSize   | obj.setSize(200, 45)     | - Modifica ambos largura e altura do objeto | largura: number , altura: number
 setMinWidth | obj.setMinWidth(50)    | - Modifica a larguraMinima do objeto   |  larguraMinima: number
 setMaxWidth  | obj.setMaxWidth(300)   |  - Modifica a largura maxima do objeto   | larguraMaxima: number
-setTransform  | obj.setTransform("rotate(90deg)")  | - Modifica a transformacao do objeto atual  | transformacao: string CSS
-setTransformOrigin  |  obj.setTransformOrigin("50% 20%")  |  - Modifica o ponto de origem do objeto  |  origin: string CSS
+setTransform  | obj.setTransform("rotate(90deg)")  | - Modifica a transformacao do objeto atual  | transformacao: string css value
+setTransformOrigin  |  obj.setTransformOrigin("50% 20%")  |  - Modifica o ponto de origem do objeto  |  origin: string css value
 setCursor   |  obj.setCursor("pointer")  |  - Modifica o cursor do objeto  | cursor: string CSS
-setShadow  |  obj.setShadow("5px 10px #888888")   |  Modifica o nivel de sombra do objeto  |  shadow: string CSS
-setClip   |  obj.setClip("rect(0px,60px,200px,0px)")  |  - Modifica a área de clip do objeto  | clipValue: string CSS
+setShadow  |  obj.setShadow("5px 10px #888888")   |  Modifica o nivel de sombra do objeto  |  shadow: string css value
+setClip   |  obj.setClip("rect(0px,60px,200px,0px)")  |  - Modifica a área de clip do objeto  | clipValue: string css value
 setTitle  |  obj.setTitle("title-exemplo")  |  - Modifica o atributo title do elemento  | title: string
 setTabIndex  |  obj.setTabIndex(1)  | - Modifica o tabIndex do elemento  | index: integer
-setFilters   |  obj.setFilters("grayscale(100%)")  |  - Modifica os filtros do objeto  | filters: string CSS
+setFilters   |  obj.setFilters("grayscale(100%)")  |  - Modifica os filtros do objeto  | filters: string css value
 
 #### others
 Nome | Modo de uso | Descrição | Argumentos
@@ -372,6 +372,7 @@ A classe responsavel por renderizar os objetos criados.
 ### Cadeia de Herança
 herda de __EngineJS.Events__
 ### Propriedades
+#### membros privados
 > *  _bodyElement
 > * _metaResponsive
 > * _headElement
@@ -394,7 +395,7 @@ setWidth | obj.setWidth(450) | - Modifica a largura do palco em pixels | width: 
 setHeight | obj.setHeight(512) | - Modifica a altura do palco em pixels | height: number
 setSize | obj.setSize(450, 512) | - Modifica os valores de largura e altura do palco em pixels | width: number, height: number
 setBackgroundColor | obj.setBackgroundColor("yellow") | - Modifica o valor de cor de fundo do palco | background: string css value
-setBackgroundGradient | obj.setBakcgroundGradient("") | - Modifica a cor de gradiente do fundo do palco | gradient: string css value
+setBackgroundGradient | obj.setBakcgroundGradient("(red, yellow)") | - Modifica a cor de gradiente do fundo do palco | gradient: string css value
 setMinWidth | obj.setMinWidth(320) | - Determina a largura mínima do palco em pixels | minWidth: number
 setMaxWidth | obj.setMaxWidth(1080) | - Determina a largura máxima do palco em pixels | maxWidth: number
 setOverFlow | obj.setOverFlow("hidden","scroll") | - Modifica o transbordamento x e y do palco | overflowX: string css value, overflowY: string css value 
@@ -404,5 +405,7 @@ setResponsiveScale | obj.setResponsiveScale(true) | - Habilita o palco a ser res
 #### others
 Nome | Modo de uso | Descrição | Argumentos
 -----|-------------|-----------|-----------
-preloader | obj.preloader({imagens:["/MinhasImagens/imagem.png"],videos:["/MeusVideos/video.mp4"],audios:["/MeusAudios/audio.mp3"]}) | - Cria uma barra de carregamento dos arquivos a serem usados no palco | imagens: string[], videos: string[], audios:[]
+preloader | obj.preloader({imagens:["/MinhasImagens/imagem.png"],videos:["/MeusVideos/video.mp4"],audios:["/MeusAudios/audio.mp3"]}) | - Cria uma barra de carregamento dos arquivos a serem usados no palco | imagens: string[], videos: string[], audios:string[]
+
+__Atenção é altamente recomendado que você faça uso do método preloader para carregar os arquivos antes de começar a desenvolver para evitar qualquer tipo de erro de renderização ou carregamento__
 
