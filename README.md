@@ -99,29 +99,29 @@ A classe que contém a maioria dos  eventos  de um objeto por se tratar de uma _
 #### setters
 Nome | Modo de uso | Descrição | Argumentos
 -----|-------------|-----------|-----------
-setActionsClick | obj.setActionsClick(function(){console.log("hello world");}) |- Adiciona um evento de click para o objeto |fn: function
-setActionsDblClick | obj.setActionsDblClick(function(){console.log("hello world");}) | - Adiciona um evento de doubleClick para o objeto | fn: function
-setActionsMouseOver | obj.setActionsMouseOver(function(){console.log("hello world");}) | - Adiciona um evento de mouseover para o objeto | fn : function
-setActionsMouseOut | obj.setActionsMouseOut(function(){console.log("hello world");}) | - Adiciona um evento de mouseout para o objeto | fn : function
-setActionsMouseEnter | obj.setActionsMouseEnter(function(){console.log("hello world");}) | - Adiciona um evento de mousenter para o objeto | fn: function
-setActionsMouseLeave | obj.setActionsMouseLeave(function(){console.log("hello world");}) | - Adiciona um evento de mouseleave para o objeto | fn: function
-setActionsMouseDown | obj.setActionsMouseDown(function(){console.log("hello world");}) | -  Adiciona um evento de mousedown para o objeto | fn: function
-setActionsMouseUp  | obj.setActionsMouseUp(function(){console.log("hello world");})  | - Adiciona um evento de mouseup para o objeto | fn : function
-setActionsMouseMove | obj.setActionsMouseMove(function(){console.log("hello world");}) | - Adiciona um evento de mousemove para o objeto | fn:function
-setActionsTouchStart | obj.setActionsTouchStart(function(){console.log("hello world");}) | - Adiciona um evento de touchstart para o objeto | fn: function
-setActionsTouchEnd | obj.setActionsTouchEnd(function(){console.log("hello world");}) | - Adiciona um evento de touchend para o objeto | fn: function
-setActionsTouchMove | obj.setActionsTouchMove(function(){console.log("hello world");}) | - Adiciona um evento de touchmove para o objeto | fn: function
-setActionsFocus | obj.setActionsFocus(function(){console.log("hello world");}) | - Adiciona um evento de focus para o objeto | fn: function
-setActionsSwipeLeft | obj.setActionsSwipeLeft(function(){console.log("hello world");) | - Adiciona um evento de swipeleft para o objeto | fn: function
-setActionsSwipeRight | obj.setActionsSwipeRight(function(){console.log("hello world");) | - Adiciona um evento de swiperight para o objeto | fn: function
-setActionsKeyDown | obj.setActionsKeyDown(function(){console.log("hello world");) | - Adiciona um evento de keydown para o objeto | fn: function
-setActionsKeyup | obj.setActionsKeyup(function(){console.log("hello world");) | - Adiciona um evento de keyup para o objeto | fn: function
-setActionsResize | obj.setActionsResize(function(){console.log("hello world");) | - Adiciona um evento de resize para o objeto | fn: function
-setActionsOnError | obj.setActionsOnError(function(){console.log("hello world");) | - Adiciona um evento de error para o objeto | fn: function
-setActionsOrientationChange | obj.setActionsOrientationChange(function(){console.log("hello world");) | - Adiciona um evento de orientationchange para o objeto | fn: function
-setActionsScroll | obj.setActionsScroll(function(){console.log("hello world");) | - Adiciona um evento de scroll para o objeto | fn: function
-setPointerEvents | obj.setPointerEvents("none") | - Modifica os eventos de ponteiro do mouse para o objeto | events: string CSS
-setActionsWheel | obj.setActionsWheel(function(){console.log("hello world");}) | - Adiciona um evento de mousewheel para o objeto | fn: function
+setActionsClick | obj.setActionsClick({fn:function(){console.log("hello world");}}) |- Adiciona um evento de click para o objeto |fn: function
+setActionsDblClick | obj.setActionsDblClick({fn:function(){console.log("hello world");}}) | - Adiciona um evento de doubleClick para o objeto | fn: function
+setActionsMouseOver | obj.setActionsMouseOver({fn:function(){console.log("hello world");}}) | - Adiciona um evento de mouseover para o objeto | fn : function
+setActionsMouseOut | obj.setActionsMouseOut({fn:function(){console.log("hello world");}}) | - Adiciona um evento de mouseout para o objeto | fn : function
+setActionsMouseEnter | obj.setActionsMouseEnter({fn:function(){console.log("hello world");}}) | - Adiciona um evento de mousenter para o objeto | fn: function
+setActionsMouseLeave | obj.setActionsMouseLeave({fn:function(){console.log("hello world");}}) | - Adiciona um evento de mouseleave para o objeto | fn: function
+setActionsMouseDown | obj.setActionsMouseDown({fn:function(){console.log("hello world");}}) | -  Adiciona um evento de mousedown para o objeto | fn: function
+setActionsMouseUp  | obj.setActionsMouseUp({fn:function(){console.log("hello world");}})  | - Adiciona um evento de mouseup para o objeto | fn : function
+setActionsMouseMove | obj.setActionsMouseMove({fn:function(){console.log("hello world");}}) | - Adiciona um evento de mousemove para o objeto | fn:function
+setActionsTouchStart | obj.setActionsTouchStart({fn:function(){console.log("hello world");}}) | - Adiciona um evento de touchstart para o objeto | fn: function
+setActionsTouchEnd | obj.setActionsTouchEnd({fn:function(){console.log("hello world");}}) | - Adiciona um evento de touchend para o objeto | fn: function
+setActionsTouchMove | obj.setActionsTouchMove({fn:function(){console.log("hello world");}}) | - Adiciona um evento de touchmove para o objeto | fn: function
+setActionsFocus | obj.setActionsFocus({fn:function(){console.log("hello world");}}) | - Adiciona um evento de focus para o objeto | fn: function
+setActionsSwipeLeft | obj.setActionsSwipeLeft({fn:function(){console.log("hello world");}}) | - Adiciona um evento de swipeleft para o objeto | fn: function
+setActionsSwipeRight | obj.setActionsSwipeRight({fn:function(){console.log("hello world");}}) | - Adiciona um evento de swiperight para o objeto | fn: function
+setActionsKeyDown | obj.setActionsKeyDown({fn:function(){console.log("hello world");}}) | - Adiciona um evento de keydown para o objeto | fn: function
+setActionsKeyup | obj.setActionsKeyup({fn:function(){console.log("hello world");}}) | - Adiciona um evento de keyup para o objeto | fn: function
+setActionsResize | obj.setActionsResize({fn:function(){console.log("hello world");}}) | - Adiciona um evento de resize para o objeto | fn: function
+setActionsOnError | obj.setActionsOnError({fn:function(){console.log("hello world");}}) | - Adiciona um evento de error para o objeto | fn: function
+setActionsOrientationChange | obj.setActionsOrientationChange({fn:function(){console.log("hello world");}}) | - Adiciona um evento de orientationchange para o objeto | fn: function
+setActionsScroll | obj.setActionsScroll({fn:function(){console.log("hello world");}}) | - Adiciona um evento de scroll para o objeto | fn: function
+setPointerEvents | obj.setPointerEvents({events:"none"}) | - Modifica os eventos de ponteiro do mouse para o objeto | events: string CSS
+setActionsWheel | obj.setActionsWheel({fn:function(){console.log("hello world");}}) | - Adiciona um evento de mousewheel para o objeto | fn: function
 
 
 
